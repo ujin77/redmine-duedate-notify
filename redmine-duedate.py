@@ -43,8 +43,8 @@ WHERE
 DATE_ADD(`issues`.`created_on`, INTERVAL 1 DAY) < NOW()
 """
 
-QUERY_HEAD_FORMAT = u'| {:>7s} | {:25.25s} | {:10.10s} | {:5} | {:16s} | {:16s} |'
-QUERY_DATA_FORMAT = u'| {:7d} | {:25.25s} | {:10.10s} | {:5} | {:%Y-%m-%d %H:%M} | {:%Y-%m-%d %H:%M} |'
+QUERY_HEAD_FORMAT = u'| {:>6s} | {:25.25s} | {:10.10s} | {:5} | {:16s} | {:16s} |'
+QUERY_DATA_FORMAT = u'| {:6d} | {:25.25s} | {:10.10s} | {:5} | {:%Y-%m-%d %H:%M} | {:%Y-%m-%d %H:%M} |'
 QUERY_REPORT = """%s
 UNION
 %s

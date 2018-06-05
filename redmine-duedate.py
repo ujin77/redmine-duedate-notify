@@ -88,6 +88,12 @@ HTML_FORMAT = """
 {STYLE}
 </head>
 <body>
+<p>
+<ul>
+<li>SLA: 24x7 - Not closed problems for more than 2 hours
+<li>SLA: 5x8 - Not closed problems for more than 1 day
+</ul>
+</p>
 {DATA}
 </body></html>
 """

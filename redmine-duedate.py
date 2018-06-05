@@ -177,15 +177,14 @@ class RmClient(object):
 
         if result:
             message += REPORT_FOOT
+            if self._config['debug']:
+                print message
             self._send_mail(message.encode('utf-8'))
         else:
             if self._config['verbose']:
                 print('No issues')
 
     def _send_mail(self, message):
-        to_addr_list = self._config['mail']['to'].split(',')
-        print(to_addr_list)
-        # return
         html = HTML_FORMAT.format(STYLE=HTML_STYLE, DATA=message)
         msg = MIMEMultipart('alternative', None, [MIMEText(html, 'html','utf-8')])
         msg['Subject'] = self._config['mail']['subject']
